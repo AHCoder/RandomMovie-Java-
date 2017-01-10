@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="260.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainScreenController">
+   <children>
+      <TabPane prefHeight="260.0" prefWidth="511.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Choose Folders">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="184.0" prefWidth="503.0">
+                     <children>
+                        <TextField fx:id="textField1" layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="380.0" />
+                        <TextField fx:id="textField4" layoutX="14.0" layoutY="127.0" prefHeight="25.0" prefWidth="380.0" />
+                        <TextField fx:id="textField3" layoutX="14.0" layoutY="89.0" prefHeight="25.0" prefWidth="380.0" />
+                        <TextField fx:id="textField2" layoutX="14.0" layoutY="50.0" prefHeight="25.0" prefWidth="380.0" />
+                        <Button fx:id="browseButton4" layoutX="405.0" layoutY="127.0" mnemonicParsing="false" onAction="#handleBrowseButton4Action" prefHeight="25.0" prefWidth="80.0" text="Browse..." />
+                        <Button fx:id="browseButton3" layoutX="405.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleBrowseButton3Action" prefHeight="25.0" prefWidth="80.0" text="Browse..." />
+                        <Button fx:id="browseButton2" layoutX="405.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleBrowseButton2Action" prefHeight="25.0" prefWidth="80.0" text="Browse..." />
+                        <Button fx:id="browseButton1" layoutX="405.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleBrowseButton1Action" prefHeight="25.0" prefWidth="80.0" text="Browse..." />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Player Paths">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="mpcTextField" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="380.0" text="C:\Program Files\MPC-HC\mpc-hc64.exe" />
+                        <TextField fx:id="vlcTextField" layoutX="14.0" layoutY="50.0" prefHeight="25.0" prefWidth="380.0" promptText="C:\Program Files\VideoLAN\VLC\vlc.exe" text="C:\Program Files\VideoLAN\VLC\vlc.exe" />
+                        <Button fx:id="mpcBrowseButton" layoutX="399.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleMpcBrowseButtonAction" prefHeight="25.0" prefWidth="83.0" text="MPC-HC..." />
+                        <Button fx:id="vlcBrowseButton" layoutX="399.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleVlcBrowseButtonAction" prefHeight="25.0" prefWidth="83.0" text="VLC..." />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <RadioButton fx:id="mpcRadioButton" layoutX="14.0" layoutY="226.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="83.0" selected="true" text="MPC-HC">
+         <toggleGroup>
+            <ToggleGroup fx:id="player" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="vlcRadioButton" layoutX="97.0" layoutY="226.0" mnemonicParsing="false" text="VLC" toggleGroup="$player" />
+      <CheckBox fx:id="skipCheckBox" layoutX="165.0" layoutY="226.0" mnemonicParsing="false" selected="true" text="Jump 20 Min. In" />
+      <CheckBox fx:id="fullscreenCheckBox" layoutX="284.0" layoutY="226.0" mnemonicParsing="false" text="Fullscreen" />
+      <Button fx:id="goButton" layoutX="405.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleGoButtonAction" prefHeight="25.0" prefWidth="83.0" text="GO!" />
+   </children>
+</AnchorPane>
