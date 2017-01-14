@@ -44,7 +44,7 @@ public class MainScreenController implements Initializable {
     
     private final DirectoryChooser directoryChooser = new DirectoryChooser();
     private final FileChooser fileChooser = new FileChooser();
-    private List<Path> files = new ArrayList<>();
+    private final List<Path> files = new ArrayList<>();
     
     // ----- Browse buttons ----- //
     @FXML
@@ -147,7 +147,10 @@ public class MainScreenController implements Initializable {
     
     // Method to recursively list and add the files in each directory
     public void listFiles(Path path) throws IOException {
-        DirectoryStream<Path> stream = Files.newDirectoryStream(path); //, "*.{mkv, mp4, m4p, m4v, vob, avi, mov, wmv, mpg, mpeg, m2v}");
+        
+        DirectoryStream<Path> stream;
+        stream = Files.newDirectoryStream(path); //, "*.{mkv, mp4, m4p, m4v, vob, avi, mov, wmv, mpg, mpeg, m2v}");
+        
         for (Path entry : stream) {
             if (Files.isDirectory(entry)) {
                 listFiles(entry);

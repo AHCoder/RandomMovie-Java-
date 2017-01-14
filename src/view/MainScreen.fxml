@@ -6,13 +6,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="260.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainScreenController">
+<AnchorPane id="AnchorPane" prefHeight="234.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainScreenController">
    <children>
-      <TabPane prefHeight="260.0" prefWidth="511.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TabPane prefHeight="193.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
           <Tab text="Choose Folders">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="184.0" prefWidth="503.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="173.0" prefWidth="500.0">
                      <children>
                         <TextField fx:id="textField1" layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="380.0" />
                         <TextField fx:id="textField4" layoutX="14.0" layoutY="127.0" prefHeight="25.0" prefWidth="380.0" />
@@ -40,14 +40,14 @@
           </Tab>
         </tabs>
       </TabPane>
-      <RadioButton fx:id="mpcRadioButton" layoutX="14.0" layoutY="226.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="83.0" selected="true" text="MPC-HC">
+      <RadioButton fx:id="mpcRadioButton" layoutX="13.0" layoutY="201.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="83.0" selected="true" text="MPC-HC">
          <toggleGroup>
             <ToggleGroup fx:id="player" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="vlcRadioButton" layoutX="97.0" layoutY="226.0" mnemonicParsing="false" text="VLC" toggleGroup="$player" />
-      <CheckBox fx:id="skipCheckBox" layoutX="165.0" layoutY="226.0" mnemonicParsing="false" selected="true" text="Jump 20 Min. In" />
-      <CheckBox fx:id="fullscreenCheckBox" layoutX="284.0" layoutY="226.0" mnemonicParsing="false" text="Fullscreen" />
-      <Button fx:id="goButton" layoutX="405.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleGoButtonAction" prefHeight="25.0" prefWidth="83.0" text="GO!" />
+      <RadioButton fx:id="vlcRadioButton" layoutX="100.0" layoutY="201.0" mnemonicParsing="false" text="VLC" toggleGroup="$player" />
+      <CheckBox fx:id="skipCheckBox" layoutX="160.0" layoutY="201.0" mnemonicParsing="false" selected="true" text="Jump 20 Min. In" />
+      <CheckBox fx:id="fullscreenCheckBox" layoutX="280.0" layoutY="201.0" mnemonicParsing="false" text="Fullscreen" />
+      <Button fx:id="goButton" layoutX="404.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleGoButtonAction" prefHeight="25.0" prefWidth="83.0" text="GO!" />
    </children>
 </AnchorPane>
